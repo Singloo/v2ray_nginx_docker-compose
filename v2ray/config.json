@@ -1,0 +1,31 @@
+{
+  "inbounds": [
+    {
+      "port": 8888,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          { "id": "b831381d-6324-4d53-ad4f-8cda48b30811", "alterId": 64 },
+          { "id": "e5e62b0c-5b49-448d-8ade-01ddc9ebe0ae", "alterId": 64 },
+          { "id": "37e5366b-2e6e-408f-9e7c-dae47c913fae", "alterId": 64 },
+          { "id": "0ca759c9-fecf-4a14-b154-80fa2633f4ab", "alterId": 64 },
+          { "id": "f4d99388-2b6e-46ad-b948-ac27054aa345", "alterId": 64 }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "connectionReuse": true,
+          "path": "/same/path/you/defined/in/nginx/conf"
+        }
+      },
+      "listen": "0.0.0.0"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+version: '3'
+services: 
+    nginx:
+        image: nginx:latest
+        network_mode: "host"
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - ./nginx:/etc/nginx/:ro
+        restart: always
+        networks: 
+            internal: 
+    v2ray:
+        image: v2ray/official
+        container_name: v2ray
+        ports:
+            - 8088:8888
+        volumes:
+            - "./v2ray:/etc/v2ray"
+        command: ["v2ray", "-config=/etc/v2ray/config.json"]
+        restart: "always"
+        depends_on:
+            - nginx
+        networks: 
+            internal:
+
+networks: 
+    internal: 
