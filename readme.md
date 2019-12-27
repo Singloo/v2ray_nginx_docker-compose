@@ -8,3 +8,5 @@ bootstrap a v2ray server
 - replace `/same/path/you/defined/in/nginx/conf` in `./v2ray/config.json` with exactly the same path you wrote in last step
 - apply https certificates, put them into `nginx/cert`, replace name of `ssl_certificate`, `ssl_certificate_key` in `nginx.conf`
 - Congrats, last step, buy a server, install `docker`,`docker-compose`, run `docker-compose up -d`
+
+default exposed port is `8088`
